@@ -39,7 +39,7 @@
                 // 7) Segundo .then(): se ejecuta cuando ya tenemos los datos
                 .then((datos) => {
                     // 8) Según cómo esté armada esta API, los registros vienen
-                    var qs = datos.data;
+                    var qs = datos;
 
                     // 9) console.log() no muestra nada en la página: aparece en la
                     console.log("Datos recibidos:", qs);
@@ -48,7 +48,7 @@
 
                     qs.forEach((x) => {
                         // Nota: usar += con innerHTML dentro de un forEach funciona por ahora, pero en listas grandes es poco eficiente y seguro. 
-                        llenar.innerHTML += `<li>${x.name}</li>`;
+                        llenar.innerHTML +=`<li>${x.Name}</li>`;
                     });
                 })
 
